@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<title>Ulka - Hinduja Test</title>	
+</head>
+<body>
+
+<section role="main" aria-label="Main content">
+	<header class="topBanner">
+		<div class="container">
+			<div class="row">
+				<div class="offset-md-3 col-md-5 pt-4">
+					<div class="d-flex justify-content-center">
+						<div class="logo">
+							<img src="images/xp-logo.png" width="213" height="93" alt="" class="img-fluid lazyloaded">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-8 col-sm-6 xp-header">
+					<div class="row h-100">
+						<div class="col-12 col-lg-10 offset-lg-3 middel-text pl-lg-0 py-2 py-lg-3 white-txt text-center">
+							<h1 class="roboto m-0 pl-xl-4 pb-3 pb-sm-2 pb-lg-0 pt-sm-4">
+								Express Painting for you,<br class="d-sm-block d-none">
+								<span>safer</span> than ever!
+							</h1>
+							<h2>#FasterCleanerSafer</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 col-sm-6">
+					<div class="row justify-content-md-end justify-content-center" id="dvForm">
+						<div class="contact-form mb-5">
+							<div class="content-body form-default">
+								<div class="border">
+									<h3 class="purple montserrat">Let’s Connect!</h3>
+									<div class="form-group">
+										<label>
+											<span>Your Name</span>
+											<input type="text" maxlength="50" name="txtexpName" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name"></label><br>
+										<small id="spnName" class="text-danger"></small>
+									</div>
+									<div class="form-group form-group-mobile">
+										<label>
+											<span>Mobile No</span>
+											<input type="text" class="form-control form-ico form-ico-02 undefined" name="txtexpPhone" id="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="" placeholder="Mobile No"></label><br>
+										<small id="spnMobileNumber" class="text-danger"></small>
+									</div>
+									<div class="form-group">
+									<label>
+											<span>Email Address</span>
+											<input type="text" class="form-control form-ico form-ico-03 undefined" name="txtexpEmail" id="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="" placeholder="Email Address"></label>
+										<small id="spnEmail" class="text-danger"></small>
+									</div>
+									<div class="form-group">
+									<label>
+											<span>Your City</span>
+										<input type="text" class="form-control form-ico form-ico-04" placeholder="Your City" maxlength="25" onchange="getValidationMessageCity();" onkeypress="return isAlphabetKey(event, 'city')" id="txtexpCity"> </label>
+										<small id="spnCity" class="text-danger"></small>
+									</div>
+									<div class="form-group">
+										<div class="select-css form-select">
+										<label>
+												<span>Your Language</span>
+											<select name="language" id="txtexpLanguage" class="form-control">
+												<option value="0" selected="">Choose Your Language</option>
+												<option value="Bengali">Marathi </option>
+												<option value="Hindi">Hindi </option>
+												<option value="English">English </option>
+											</select>
+											</label>
+										</div>
+									</div>
+									<small id="spnLanguage" class="text-danger" style="position: relative;  top: -10px;"></small>
+									<div class="form-group mb-2">
+										<label>
+												<span>message</span>
+											<textarea name="message" id="txtexpQuery" row="1" placeholder="Message" maxlength="300" class="form-control form-ico form-ico-05"></textarea>
+										</label>
+									</div>
+									<div class="form-group mb-3">
+										<label class="form-check-label dosis-font" for="chkAccept">
+											<input type="checkbox" id="chkAccept" class="form-check-inputs" value="" checked="checked">
+											<span class="i-agree" style="margin-left: 5px; font-size:12px;">I agree to the terms and conditions.</span>
+											
+											<span class="checkmark"></span>
+										</label>
+										<small id="spnAccept" class="text-danger"></small>
+									</div>
+
+									<div class="text-center">
+										<button id="send" name="send" class="btn btn-default btn-purpal btn-md dosis-font">
+											Submit <img src="images/button-arrow.png" alt="button-arrow">
+										</button>
+									</div>
+									<div class="loading d-none"></div>
+									<div class="clearfix"></div>
+									<div class="text-center">
+										<label id="ErrorMsgExp" class="alert alert-danger mx-auto mt-3" style="display:none;"></label>
+										<label id="SuccessMsgExp" class="alert alert-success mx-auto mt-3" style="display:none;">Thank you for your interest.</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<section class="white-bg safety-step-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="pb-3">What makes Express Painting <br class="d-lg-block d-none">
+                        the best-in-class painting service?</h2>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-left order-md-6">
+                    <div class="videoDetail">
+                        <div class="video-block">
+                            <div class="youtube-video-place embed-responsive embed-responsive-4by3 " data-yt-url="https://www.youtube.com/embed/88PXJAA6szs?autoplay=1&amp;mute=1&amp;enablejsapi=1">
+                                <img data-src="images/video-thumb.jpg" class="img-fluid play-youtube-video lazyloaded" alt="Safe nahi, Super Safe Painting!" src="images/video-thumb.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-caption">
+                        <h3 class="py-3"> Safe nahi, <span class="pink"> Super Safe Painting!</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-6 text-left order-md-0">
+                    <p>During these times of caution, <span>Berger Express Painting</span> assures you of zero contact, safe &amp; seamless <span>home wall painting</span> experience. </p>
+                    <p><span>Berger Paints XP</span> Customer Executives and Service Partners are equipped with ‘XP Health & Safety Kit’ comprising of masks, gloves, caps, digital thermometer, hand sanitizer & disinfectant which will be used during the painting process to ensure safety and hygiene.</p>
+                    <p><span>Express Painting</span> pioneered home painting services by being the first painting service in India to introduce consumers to an all-round service experience consisting of at-home consultancy, site recce and estimation, trained painters using automatic tools, supervision and a dust-free, faster and better painting job.</p>
+					<P>With the introduction of the Express Painting App, we have digitised our services, making it zero contact, paperless and cashless for added safety.</P>
+                    <p>Also you can choose paint color and wall designs with <span>Berger Paint Catalogue</span> on Express Painting App. It has myriad of shades and color combinations to transform both your home interior & exterior into your desired home. You can always count on us to serve you happily!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="grey-bg makes-xp py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center h-text">
+                    <h1>What makes Express Painting the right choice?</h1>
+                </div>
+            </div>
+            <div class="row no-gutter">
+                <div class="makes-xp-carousel owl-carousel owl-theme owl-loaded owl-drag">
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1120px;"><div class="owl-item active" style="width: 363.333px; margin-right: 10px;"><div class="item">
+                        <div class="col-sm-12">
+                            <div class="makes-xp-step white-bg pink-top-border pink-bottom">
+                                <div class="title text-center">
+                                    <h2 class="pink">safer</h2>
+                                </div>
+                                <div class="pionts">
+                                    <ul>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/latex.png" class=" lazyloaded" alt="" src="images/latex.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3>Zero contact service. Painters trained and certified on Safety &amp; Hygiene </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/healthcare-and-medical.png" class=" lazyloaded" alt="" src="images/healthcare-and-medical.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Painters use Health &amp; Safety Kit (mask, gloves, cap and sanitisers)</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/surfaces.png" class=" lazyloaded" alt="" src="images/surfaces.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Daily disinfection of tools &amp; regularly touched surfaces</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/technology.png" class=" lazyloaded" alt="" src="images/technology.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Daily temperature &amp; symptoms check on Express Painting App</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/on-site-delivery.png" class=" lazyloaded" alt="" src="images/on-site-delivery.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">On-site delivery of sanitised products</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 363.333px; margin-right: 10px;"><div class="item">
+                        <div class="col-sm-12">
+                            <div class="makes-xp-step white-bg orange-top-border orange-bottom">
+                                <div class="title text-center">
+                                    <h2 class="orange">Faster</h2>
+                                </div>
+                                <div class="pionts">
+                                    <ul>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/painters.png" class=" lazyloaded" alt="" src="images/painters.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3>Trained painters use <br>time-saving processes</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/tools.png" class=" lazyloaded" alt="" src="images/tools.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Mechanised tools for faster painting</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/mobile-icon.png" class=" lazyloaded" alt="" src="images/mobile-icon.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Browse, book &amp; pay in a few<br> clicks on Express Painting App </h3>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/supervision.png" class=" lazyloaded" alt="" src="images/supervision.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Site supervision for on-time delivery</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/faster-response.png" class=" lazyloaded" alt="" src="images/faster-response.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Faster response with Express Painting App</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 363.333px; margin-right: 10px;"><div class="item">
+                        <div class="col-sm-12">
+                            <div class="makes-xp-step white-bg purple-top-border purple-bottom">
+                                <div class="title text-center">
+                                    <h2 class="purple">Cleaner</h2>
+                                </div>
+                                <div class="pionts">
+                                    <ul>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/sofa.png" class=" lazyloaded" alt="" src="images/sofa.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Furniture &amp; floor covers to protect valuables</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/dust-free.png" class=" lazyloaded" alt="" src="images/dust-free.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Dust-free painting* </h3>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/disinfection.png" class=" lazyloaded" alt="" src="images/disinfection.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Disinfection of regularly<br> touched surfaces </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/kills-germs.png" class=" lazyloaded" alt="" src="images/kills-germs.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Floor cleaning &amp; disinfection<br> kills germs, removes spots </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row no-gutter">
+                                                <div class="col-3 text-center">
+                                                    <img data-src="images/clean-up.png" class=" lazyloaded" alt="" src="images/clean-up.png">
+                                                </div>
+                                                <div class="col-9">
+                                                    <h3 class="valign">Post-painting site clean-up </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"><button role="button" aria-label="owl dot" class="owl-dot active"><span></span></button></div></div>
+            </div>           
+        </div>
+    </section>	
+	<section class="py-5 express-painting-tools">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-12 xp-tools">
+                            <div class="title text-center">
+                                <h2>Express Painting Tools</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xp-tools-carousel owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer"><div class="owl-stage"><div class="owl-item"><div class="item">
+                            <div class="col-md-12">
+                                <h3 class="d-none d-sm-block text-center pt-3"> Sanding Machine</h3>
+                                <div class="row no-gutter">
+                                    <div class="col-sm-4 offset-sm-1">
+                                        <img data-src="images/tool-1.png" class="img-responsive center-block lazyloaded" alt="" src="images/tool-1.png">
+                                    </div>
+                                    <div class="col-sm-7 align-self-center px-4">
+                                        <h3 class="d-block d-sm-none text-center mb-head"> Sanding Machine</h3>
+                                        <ul class="tool-list">
+                                            <li>Faster &amp; Cleaner</li>
+                                            <li>Dust-Free Vacuum Function</li>
+                                            <li>Regulated Speeds</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item"><div class="item">
+                            <div class="col-md-12">
+                                <h3 class="d-none d-sm-block text-center pt-3"> Multipurpose Mixer</h3>
+                                <div class="row no-gutter">
+                                    <div class="col-sm-4 offset-sm-1">
+                                        <img data-src="images/tool-2.png" class="img-responsive center-block lazyloaded" alt="" src="images/tool-2.png">
+                                    </div>
+                                    <div class="col-sm-7 align-self-center px-4">
+                                        <h3 class="d-block d-sm-none text-center mb-head"> Sanding Machine 2</h3>
+                                        <ul class="tool-list">
+                                            <li>Faster &amp; Cleaner 2</li>
+                                            <li>Dust-Free Vacuum Function 2</li>
+                                            <li>Regulated Speeds 2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"><button role="button" aria-label="owl dot" class="owl-dot active"><span></span></button><button role="button" aria-label="owl dot" class="owl-dot"><span></span></button><button role="button" aria-label="owl dot" class="owl-dot"><span></span></button><button role="button" aria-label="owl dot" class="owl-dot"><span></span></button><button role="button" aria-label="owl dot" class="owl-dot"><span></span></button></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<footer class="text-center white-txt">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<span class="px-1">© 2020 Berger Paints India - All Rights Reserved</span> <span class="d-none d-sm-inline">|</span> <br class="d-block d-sm-none"><a href="#" class="tnc px-1">*Terms &amp; Conditions</a> | <a href="#" class="tnc px-1">Privacy Policy</a> | <a href="#" class="tnc px-1">Disclaimer</a> 				
+			</div>
+		</div>
+	</div>
+</footer>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/scripts.min.js" async=""></script>
+</body>
+</html>
